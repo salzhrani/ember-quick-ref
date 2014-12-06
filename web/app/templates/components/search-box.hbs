@@ -1,0 +1,14 @@
+{{input type="text" placeholder="What" value=term class="search-box-input"}}
+<ul class="search-box-results">
+{{#each item in items}}
+<li class="search-box-results-item">
+{{log item}}
+{{#link-to 'show' item class="results-item-link"}}
+<h2 class="results-item-name">{{unbound item.name}}</h2>
+<h3 class="results-item-class">{{unbound item.class}}</h3>
+
+{{/link-to}}
+
+</li>
+{{/each}}
+</ul>
