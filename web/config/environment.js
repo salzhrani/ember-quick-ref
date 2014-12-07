@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'web',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         'ember-htmlbars': true
