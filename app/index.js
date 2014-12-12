@@ -4,7 +4,7 @@ var yaml    = require('js-yaml');
 
 
 // create json from yml with some tweaking
-var doc = yaml.safeLoad(fs.readFileSync('docs/api.yml', 'utf8'));
+var doc = yaml.safeLoad(fs.readFileSync('api.yml', 'utf8'));
 var items = doc.classitems;
 var data = new Array(Object.keys(doc.classitems).length);
 var i = 0;
@@ -27,4 +27,4 @@ for (var prop in items) {
 	};
 	++i;
 }
-fs.writeFileSync('web/app/data.js','export default ' + JSON.stringify(data));
+fs.writeFileSync('../web/app/data.js','export default ' + JSON.stringify(data));

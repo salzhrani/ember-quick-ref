@@ -17,15 +17,6 @@
   },
   "homepage": "https://github.com/salzhrani/ember-quick-ref",
   "dependencies": {
-    "bluebird": "^2.3.11",
-    "fulltext-engine": "^1.1.1",
-    "fuzzy": "^0.1.0",
     "js-yaml": "^3.2.3",
-    "level-queryengine": "^3.0.1",
-    "leveldown": "~0.10.0",
-    "levelup": "^0.19.0",
-    "node-ft": "0.0.8",
-    "search-index": "^0.4.2",
-    "underscore": "^1.7.0"
   }
 }
