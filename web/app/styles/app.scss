@@ -13,17 +13,51 @@ h1, h2, h3, h4, h5 {
   margin:0;
 }
 
+html, body, .ref-app, .main {
+  height: 100%;
+}
+
 .main {
   @extend .cf;
 }
 
 aside, article {
-  float: left;
+  min-height: 100%;
+}
+aside {
+  background-color: #bf360c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+
 }
 article {
   width: calc(100% - 16em);
   box-sizing: border-box;
   padding: 1em;
+  line-height: 1.6em;
+  margin-left: 16em;
+  overflow-y: scroll;
+  height: 100%;
+}
+header {
+  margin: -1rem -1rem 1rem -1rem;
+  padding: 1em;
+  background-color: #bf360c;
+  color: white;
+  font-size: 1.5em;
+  img {
+    height: 1.2em;
+    margin-top: -1em;
+  }
+}
+.detail-name, .detail-class, .detail-module, .detail-submodule, article b{
+  color: #bf360c;
+}
+.detail-desctiption {
+  color: black;
 }
 search-box {
   margin: 0 auto;
@@ -34,7 +68,6 @@ search-box {
   padding: 0.5em;
   border-radius: 8px;
   box-sizing: border-box;
-  background-color: rgba(128, 128, 128, 0.5);
   .search-box-input {
     line-height: 3em;
     height: 3em;
@@ -49,26 +82,37 @@ search-box {
     margin:0;
     list-style-type: none;
     padding: 0;
+    color: #fbe9e7;
   }
   .search-box-results-item {
-    padding: 0.3em 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .results-item-link {
+    @extend .cf;
+    padding: 0.5em 0 0.5em 0.7em;
     text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+    outline:0;
+    border-radius: 5px;
+    &:focus {
+      background-color: rgba(255,255,255,0.3);
+    }
   }
   .results-item-name {
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     text-align: left;
-    color: black;
+    // color: black;
+    color: #FDF7F6;
     line-height: 1.5em;
   }
   .results-item-class {
-    font-size: 1em;
+    font-size: 0.85em;
     text-align: left;
     line-height: 1.2em;
-    color: rgb(56, 56, 56);
+    color: #ffccbc;
+    font-weight: normal;
   }
 
 }

@@ -6,7 +6,8 @@ export default Ember.Object.extend({
     this.index = lunr(function () {
       this.field('name', {boost:10});
       this.field('short', {boost:10});
-      // this.field('module');
+      // this.field('description');
+      this.field('module');
       // this.field('submodule');
       this.field('class');
       // this.field('namespace');

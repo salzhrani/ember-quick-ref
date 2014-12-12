@@ -4,7 +4,11 @@
 <li class="search-box-results-item">
 {{log item}}
 {{#link-to 'show' item class="results-item-link"}}
+{{#if item.name}}
 <h2 class="results-item-name">{{unbound item.name}}</h2>
+{{else}}
+<h2 class="results-item-name">{{unbound item.module}}</h2>
+{{/if}}
 <h3 class="results-item-class">{{unbound item.class}}</h3>
 
 {{/link-to}}

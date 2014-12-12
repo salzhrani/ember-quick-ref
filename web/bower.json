@@ -2,7 +2,7 @@
   "name": "web",
   "dependencies": {
     "handlebars": "~2.0.0",
-    "jquery": "^1.11.1",
+    "jquery": "^2.1.0",
     "ember": "canary",
     "ember-resolver": "~0.1.10",
     "loader.js": "stefanpenner/loader.js#1.0.1",
