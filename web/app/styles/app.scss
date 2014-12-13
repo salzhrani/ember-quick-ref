@@ -16,13 +16,16 @@ h1, h2, h3, h4, h5 {
 html, body, .ref-app, .main {
   height: 100%;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 .main {
   @extend .cf;
 }
 
 aside, article {
   min-height: 100%;
+  -ms-overflow-style: none;
 }
 aside {
   background-color: #bf360c;
