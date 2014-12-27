@@ -1,6 +1,8 @@
 {{log item}}
 <h2 class="detail-name">{{item.name}}</h2>
-<h3 class="detail-class">Class: {{item.class}}</h3>
+{{#if item.class}}
+<h3 class="detail-class">Class: {{#link-to 'c' item.class}}{{item.class}}{{/link-to}}</h3>
+{{/if}}
 <h4 class="detail-module">Module: {{item.module}}</h4>
 <h4 class="detail-submodule"> Submodule: {{item.submodule}}</h4>
 <b>Description:</b>

@@ -5,7 +5,9 @@ var yaml    = require('js-yaml');
 
 // create json from yml with some tweaking
 var doc = yaml.safeLoad(fs.readFileSync('api.yml', 'utf8'));
-var items = doc.classitems;
+var items = doc.classitems;	
+var classes = doc.classes;
+var classData = {};
 var data = new Array(Object.keys(doc.classitems).length);
 var i = 0;
 for (var prop in items) {
@@ -23,8 +25,9 @@ for (var prop in items) {
 		submodule: item.submodule,
 		namespace: item.namespace,
 		filename: prop,
-		short: (item.class.indexOf('Ember.') === 0 ? item.class.substring(6) : (item.class.indexOf('RSVP.') === 0 ? item.class.substring(5) : ''))
+		shortname: (item.class.indexOf('Ember.') === 0 ? item.class.substring(6) : (item.class.indexOf('RSVP.') === 0 ? item.class.substring(5) : ''))
 	};
 	++i;
 }
 fs.writeFileSync('../web/app/data.js','export default ' + JSON.stringify(data));
+fs.writeFileSync('../web/app/classes.js','export default ' + JSON.stringify(classes));

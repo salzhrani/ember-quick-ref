@@ -19,5 +19,7 @@ var app = new EmberApp();
 
 app.import('bower_components/lunr.js/lunr.js');
 app.import('bower_components/marked/lib/marked.js');
+app.import('bower_components/highlightjs/highlight.pack.js');
+app.import('bower_components/highlightjs/styles/solarized_dark.css');
 
 module.exports = app.toTree();

@@ -28,7 +28,7 @@ aside, article {
   -ms-overflow-style: none;
 }
 aside {
-  background-color: #bf360c;
+  background-color: #AB3D33;
   position: absolute;
   left: 0;
   top: 0;
@@ -40,15 +40,15 @@ article {
   width: calc(100% - 16em);
   box-sizing: border-box;
   padding: 1em;
-  line-height: 1.6em;
+  line-height: 2em;
   margin-left: 16em;
   overflow-y: scroll;
   height: 100%;
 }
 header {
-  margin: -1rem -1rem 1rem -1rem;
-  padding: 1em;
-  background-color: #bf360c;
+  margin: -1rem -1rem 1.6rem -1rem;
+  padding: 1.5rem 1rem;
+  background-color: #AB3D33;
   color: white;
   font-size: 1.5em;
   img {
@@ -56,8 +56,49 @@ header {
     margin-top: -1em;
   }
 }
+.class-name {
+  margin-bottom: 1em;
+  color: #AB3D33;
+  &:before {
+    content: 'c';
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    background-color: #C44B29;
+    margin-right: 0.5em;
+    line-height: 1em;
+    text-align: center;
+    color: white;
+    vertical-align: text-top;
+  }
+}
+.class-extends {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.extends-link, .detail-class a {
+  text-decoration: none;
+  color: #AB3D33;
+  font-style: italic;
+}
+.detail-name:before {
+  content: 'm';
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  background-color: #C44B29;
+  margin-right: 0.5em;
+  line-height: 1.1em;
+  text-align: center;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 0.7em;
+  padding: 0.2em;
+}
 .detail-name, .detail-class, .detail-module, .detail-submodule, article b{
-  color: #bf360c;
+  color: #AB3D33;
 }
 .detail-desctiption {
   color: black;
@@ -68,12 +109,12 @@ search-box {
   display: block;
   width: 16em;
   // height: 5em;
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 8px;
   box-sizing: border-box;
   .search-box-input {
-    line-height: 3em;
-    height: 3em;
+    line-height: 2.6em;
+    height: 2.5em;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 0 0.5em;
@@ -118,4 +159,34 @@ search-box {
     font-weight: normal;
   }
 
+}
+.class-list {
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    column-count: 2;
+  }
+  li:before {
+    content: 'c';
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    background-color: #C44B29;
+    margin-right: 0.5em;
+    line-height: 1em;
+    text-align: center;
+    color: white;
+    vertical-align: text-top;
+  }
+}
+
+.hljs {
+  background-color: #302E24;
+  color: #B4CCB4;
+  padding: 1em 0.5em;
+}
+.hljs-keyword, .hljs-winutils, .method, .hljs-addition, .css .hljs-tag, .hljs-request, .hljs-status, .nginx .hljs-title {
+  color: #C44B29;
 }

@@ -1,3 +1,11 @@
 <p>
   Hello, enter your search term in the top left box
 </p>
+<section class="class-list">
+  <h3>Classes</h3>
+  <ul>
+    {{#each c in this}}
+    <li>{{#link-to 'c' c}}{{unbound c}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</section>

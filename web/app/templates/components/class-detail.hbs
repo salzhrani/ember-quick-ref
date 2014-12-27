@@ -1,0 +1,6 @@
+<h3 class="class-name">{{item.name}}</h3>
+{{#if item.extends}}
+<span class="class-extends">Extends: {{#link-to 'c' item.extends class="extends-link"}}{{item.extends}}{{/link-to}}</span>
+{{/if}}
+{{log item}}
+{{{markdown-text item.description}}}

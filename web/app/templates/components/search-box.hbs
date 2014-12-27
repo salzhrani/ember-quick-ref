@@ -1,17 +1,23 @@
-{{input type="text" placeholder="What" value=term class="search-box-input"}}
+{{input type="text" placeholder="Class or method" value=term class="search-box-input"}}
 <ul class="search-box-results">
 {{#each item in items}}
 <li class="search-box-results-item">
 {{log item}}
-{{#link-to 'show' item class="results-item-link"}}
-{{#if item.name}}
-<h2 class="results-item-name">{{unbound item.name}}</h2>
+{{#if item.classitems}}
+  {{#link-to 'c' item.name class="results-item-link"}}
+  <h2 class="results-item-name">{{unbound item.name}}</h2>
+  {{/link-to}}
 {{else}}
-<h2 class="results-item-name">{{unbound item.module}}</h2>
-{{/if}}
-<h3 class="results-item-class">{{unbound item.class}}</h3>
+  {{#link-to 'show' item class="results-item-link"}}
+  {{#if item.name}}
+  <h2 class="results-item-name">{{unbound item.name}}</h2>
+  {{else}}
+  <h2 class="results-item-name">{{unbound item.module}}</h2>
+  {{/if}}
+  <h3 class="results-item-class">{{unbound item.class}}</h3>
 
-{{/link-to}}
+  {{/link-to}}
+{{/if}}
 
 </li>
 {{/each}}

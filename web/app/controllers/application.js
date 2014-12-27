@@ -1,5 +1,10 @@
 import Ember from 'ember';
 import data from '../data';
+import classes from '../classes';
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 export default Ember.ObjectController.extend({
   term: null,
   items : function(){
@@ -12,7 +17,13 @@ export default Ember.ObjectController.extend({
       ids[i] = items[i].ref;
     }
 
-    return data.objectsAt(ids);
+    return ids.map(function (id) {
+      if (isNumber(id)) {
+        return data[id];
+      } else {
+        return classes[id];
+      }
+    });
   }.property('term').readOnly(),
   actions: {
     updateTerm : function(term){
