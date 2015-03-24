@@ -4,7 +4,7 @@
 <section class="class-list">
   <h3>Classes</h3>
   <ul>
-    {{#each c in this}}
+    {{#each c in model}}
     <li>{{#link-to 'c' c}}{{unbound c}}{{/link-to}}</li>
     {{/each}}
   </ul>

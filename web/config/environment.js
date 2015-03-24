@@ -40,8 +40,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/ember-quick-ref';
   }
+  ENV.manifest = {
+    enabled: true,
+    appcacheFile: "/manifest.appcache",
+    excludePaths: ['index.html'],
+    includePaths: ['/'],
+  };
 
   return ENV;
 };

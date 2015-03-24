@@ -5,7 +5,7 @@ import classes from '../classes';
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
-export default Ember.ObjectController.extend({
+export default Ember.Controller.extend({
   term: null,
   items : function(){
     if (!this.get('term')) {
