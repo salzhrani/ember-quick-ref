@@ -45,8 +45,7 @@ module.exports = function(environment) {
   ENV.manifest = {
     enabled: true,
     appcacheFile: "/manifest.appcache",
-    excludePaths: ['index.html'],
-    includePaths: ['/'],
+    excludePaths: ['index.html', 'robots.txt', 'crossdomain.xml'],
   };
 
   return ENV;
